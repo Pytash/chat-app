@@ -3,7 +3,6 @@ import './App.css';
 
 import RoomList from './Components/RoomList';
 import MessageList from './Components/MessageList';
-import Message from './Components/Message';
 import SendMessage from './Components/SendMessage';
 import NewRoom from './Components/NewRoom';
 
