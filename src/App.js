@@ -6,6 +6,7 @@ import MessageList from './Components/MessageList';
 import SendMessage from './Components/SendMessage';
 import NewRoom from './Components/NewRoom';
 
+// Chat Room Application
 class App extends Component {
   render() {
     return (
