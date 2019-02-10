@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 
-export class SendMessage extends Component {
+class SendMessageForm extends Component {
   render() {
     return (
-      <div className='send-message'>
+      <div className='send-message-form'>
         <form>
             <input 
-                placeholder='SendMessage'
+                placeholder='SendMessageForm'
                 type='text'
             />    
         </form>
@@ -15,4 +15,4 @@ export class SendMessage extends Component {
   }
 }
 
-export default SendMessage
+export default SendMessageForm

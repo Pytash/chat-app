@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-export class NewRoom extends Component {
+class NewRoomForm extends Component {
   render() {
     return (
-      <div className='new-room'>
+      <div className='new-room-form'>
         <form>
             <input 
                 type='text'
-                placeholder='NewRoom'
+                placeholder='NewRoomForm'
                 required
             />
             <button id='create-room-btn' type='submit'>+</button>
@@ -17,4 +17,4 @@ export class NewRoom extends Component {
   }
 }
 
-export default NewRoom
+export default NewRoomForm
