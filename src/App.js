@@ -4,9 +4,33 @@ import RoomList from './Components/RoomList';
 import MessageList from './Components/MessageList';
 import SendMessageForm from './Components/SendMessageForm';
 import NewRoomForm from './Components/NewRoomForm';
+import Chatkit from '@pusher/chatkit-client';
+import { tokenUrl, instanceLocator } from './config';
 
 // Chat Room Application
 class App extends Component {
+
+  componentDidMount() {
+    const chatManager = new Chatkit.ChatManager({
+      instanceLocator,
+      userId: 'cody',
+      tokenProvider: new Chatkit.TokenProvider({
+        url: tokenUrl
+      })
+    })
+
+    chatManager.connect()
+    .then(currentUser => {
+      currentUser.subscribeToRoom({
+        roomId: 19417498,
+        hooks: {
+          onNewMessage: message => {
+            
+          }
+        }
+      })
+    })
+  }
   render() {
     return (
       <div className="app">

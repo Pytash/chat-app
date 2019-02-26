@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 const DUMMY_DATA = [
   {
-    senderId: 'Cody',
+    senderId: 'cody',
     text: 'Hey, how is it going?'
   },
   {
-    senderId: 'Chloe',
+    senderId: 'chloe',
     text: 'Great, how are you?'
   },
   {
-    senderId: 'Cody',
+    senderId: 'cody',
     text: 'Good, good!'
   }
 ]
