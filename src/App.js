@@ -10,6 +10,10 @@ import { tokenUrl, instanceLocator } from './config';
 // Chat Room Application
 class App extends Component {
 
+  state = {
+    messages: []
+  }
+
   componentDidMount() {
     const chatManager = new Chatkit.ChatManager({
       instanceLocator,
@@ -22,10 +26,12 @@ class App extends Component {
     chatManager.connect()
     .then(currentUser => {
       currentUser.subscribeToRoom({
-        roomId: 19417498,
+        roomId: '19417498',
         hooks: {
           onNewMessage: message => {
-            
+            this.setState({
+              messages: [...this.state.messages, message]
+            })
           }
         }
       })
@@ -35,7 +41,7 @@ class App extends Component {
     return (
       <div className="app">
         <RoomList />
-        <MessageList />
+        <MessageList messages={this.state.messages}/>
         <SendMessageForm />
         <NewRoomForm />
       </div>
